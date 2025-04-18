@@ -1,0 +1,72 @@
+body{ 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+    
+#app {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: pulse 1s infinite;
+}
+#app .p{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: aliceblue;
+    text-transform: uppercase;
+    text-shadow: 
+    0 0 5px white,
+    0 0 10px white
+    ;
+    animation: plus 1s  infinite;
+}
+ .neon-heart path {
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 4s forwards ease-in-out;
+    filter: drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px red);
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes plus {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform:  scale(1);
+    }
+    50% {
+        transform:  scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
